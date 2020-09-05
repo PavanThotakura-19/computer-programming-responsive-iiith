@@ -51,6 +51,7 @@ window.view = {
 		this.addClickEvent('btnOk', function() { view.proceedToStartButton() })
 		this.addClickEvent('btnStart', function() { view.displayElements() })
 		this.addClickEvent('btnNext', function() { view.sortArray() })
+		this.addClickEvent('btnRandom', function() { document.getElementById("userInput").readOnly = true;})
 	},
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
@@ -70,6 +71,7 @@ window.view = {
 			alert( 'Size of the array must be an Integer !' )
 	},
 	generateRandomNumbers: function() {
+		
 		var inputValue = this.getArraySize()
 		for ( i = 0 ; i < inputValue ; i++ ) {
 			var random = Math.floor(Math.random()*15)
