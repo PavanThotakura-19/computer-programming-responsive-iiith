@@ -230,7 +230,7 @@ window.view = {
 				this.setInnerHtml('outputDayId', 'WORKING DAY');
 	 		}
 	 	}
-		if ( model.inputNumber > 6 ) {
+		if ( model.inputNumber > 7||model.inputNumber<=0 ) {
 	 		if (this.nextSiblingElement.id === 'holidayId')
 				this.codeExecutionWithColourAndId('elseIfId');
 	 		else if (this.nextSiblingElement.id === 'workingdayId') 
@@ -240,7 +240,7 @@ window.view = {
 				this.setInnerHtml('outputDayId', 'INVALID INPUT');
 	 		}
 	 	}
-	 	if (model.inputNumber === 6) {
+	 	if (model.inputNumber === 6||model.inputNumber===7) {
 	 		if (this.nextSiblingElement.id === 'holidayId') {
 				this.codeExecutionWithColour();
 				this.changeOpacity('holidayImage');
